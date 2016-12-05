@@ -1,0 +1,33 @@
+@import "_config.scss";
+@import "_mixins.scss";
+
+a {
+    color: $color-primary;
+}
+a:hover,
+a:active {
+    color: $color-secondary !important; /* Rare case that this is quite useful */
+}
+
+a.nav-link {
+    /* color: $color-primary; */
+    @include set-font(header);
+
+    @include dynamic-font-size(nav-link);
+}
+
+a.page-top.nav-link {
+    position: absolute;
+    top: 3.2rem;
+    left: map-get($page-margin-map, mobile);
+    z-index: 2;
+
+    @include respond-to(tablet) {
+        left: map-get($page-margin-map, tablet);
+    }
+
+    @include respond-to(desktop) {
+        top: 2.8rem;
+        left: 1rem;
+    }
+}

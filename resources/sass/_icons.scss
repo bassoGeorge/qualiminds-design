@@ -1,0 +1,91 @@
+/* Setup the basic icons used in the site */
+@import "_mixins.scss";
+
+@function icon_path($name) {
+    @return url("/resources/images/icon_#{$name}.svg");
+}
+
+.icon {
+    display: inline-block;
+}
+
+
+.arrow {
+    // arrow.right is the default
+    &.left, &.right {
+        vertical-align: -0.1em;  // To adjust the arrow to a normal links font-size
+    }
+    &.up {
+        transform: rotate(90deg);
+    }
+    &.right {
+        transform: rotate(180deg);
+    }
+    &.down {
+        transform: rotate(-90deg);
+    }
+
+    @each $color in (red, white) {
+        &.#{$color} {
+            background: icon_path(arrow_#{$color});
+            @include font_icon_size(1);
+        }
+    }
+}
+
+/* Social icons */
+
+// Map of icon name to ratio of width and height
+$social-icon-map: (
+    behance: 34.52 / 30,
+    linkedin: 26.12 / 30
+);
+
+@each $icon, $ratio in $social-icon-map {
+    .#{$icon} {
+        @include font_icon_size($ratio);
+
+        @each $type in (light, dark) {
+            &.#{$type} {
+                background: icon_path(#{$icon}_#{$type});
+            }
+        }
+
+        &.light:hover,
+        &.light:active {
+            background: icon_path(#{$icon}_dark);
+        }
+    }
+}
+
+$contact-icon-map: (
+    location: 18.79 / 30,
+    email: 27.2 / 30
+);
+
+@each $icon, $ratio in $contact-icon-map {
+    .icon.#{$icon} {
+        @include font_icon_size($ratio);
+        background: icon_path($icon)
+    }
+}
+
+$skill-type-map: (
+    ui: 42.21 / 30,
+    ux: 32.27 / 30,
+    editorial: 25.88 / 30,
+    graphic: 30 / 30,
+    branding: 24.13 / 30
+);
+
+.block-icon {
+    display: block;
+    margin: 0 auto;
+}
+
+@each $type, $ratio in $skill-type-map {
+    .block-icon.skill-#{$type} {
+        background: icon_path(skill_#{$type});
+        @include font_icon_size($ratio);
+    }
+}

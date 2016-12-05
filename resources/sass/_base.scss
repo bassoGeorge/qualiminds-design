@@ -1,0 +1,45 @@
+@import "_config.scss";
+@import "_mixins";
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    @include set-font(body);
+
+    line-height: $lh-medium;
+    color: $color-main-text;
+    padding: 0;
+    margin: 0;
+
+    @include dynamic-font-size(small);
+}
+
+h1,h2,h3,h4,h5,h6 {
+    @include set-font(header);
+}
+
+h1 {
+    @include dynamic-font-size(large);
+}
+
+h2 {
+    @include dynamic-font-size(medium);
+}
+
+h3 {
+    @include dynamic-font-size(small);
+}
+
+/*
+.page-content {
+    @include page-margin(map-get($page-margin-map, mobile));
+    @include respond-to(tablet) {
+        @include page-margin(map-get($page-margin-map, tablet));
+    }
+
+    @include respond-to(desktop) {
+        @include page-margin(map-get($page-margin-map, desktop));
+    }
+} */

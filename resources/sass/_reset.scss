@@ -1,0 +1,25 @@
+// Box sizing and position relative
+html, body, div, section, main, footer {
+    box-sizing: border-box;
+    position: relative;
+}
+
+a,
+a:hover,
+a:focus,
+a:visited {
+    text-decoration: none;
+}
+
+img {
+    width: 100%; // Default responsive behaviour
+}
+
+p,h1,h2,h3,h4,h5,h6,ul {
+    margin: 0;  // The stupid defaults messing with our layout
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}

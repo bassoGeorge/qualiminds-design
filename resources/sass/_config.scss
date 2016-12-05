@@ -1,0 +1,76 @@
+//------------------------------//
+// Core configuration File      //
+// Do not output any CSS her    //
+// Author: Anish George         //
+//------------------------------//
+
+
+// Breakpoint widths
+$breakpoints-map: (
+    tablet: 48em,
+    desktop: 64em,
+    desktopL: 80em
+);
+
+$font-map: (
+    header: (
+        font-family: Raleway,
+        /* letter-spacing: 0.08em, */
+        /* text-transform: uppercase */
+    ),
+    body: (
+        font-family: Arimo
+    )
+);
+
+$font-size-map: (
+    small: (
+        mobile: 1.2rem,
+        tablet: 1.4rem
+    ),
+    medium: (
+        mobile: 1.6rem,
+        tablet: 1.8rem
+    ),
+    large: (
+        mobile: 2.1rem,
+        tablet: 2.2rem
+    ),
+    social-icon: (
+        mobile: 2.5rem,
+        tablet: 2.5rem,
+        desktop: 4rem
+    ),
+    lead-para: (
+        mobile: 1.2rem,
+        tablet: 1.6rem,
+        desktop: 1.8rem
+    ),
+
+    nav-link: (
+        mobile: 1.4rem,
+        tablet: 1.8rem
+    ),
+    quote: (
+        mobile: 2.1rem,
+        tablet: 4rem,
+        desktop: 5rem
+    ),
+);
+
+$page-margin-map: (
+    mobile: 2rem,
+    tablet: 4rem,
+    desktop: 9rem
+);
+
+// line-heights, TODO, remove
+$lh-small: 1.4;
+$lh-medium: 1.6;
+$lh-large: 2.1;
+
+// Color Palet
+$color-primary:              #f61d22;   // Red
+$color-main-text:            #636465;   // Dark grey
+$color-secondary-text:       #000000;   // black
+$color-inverse-text:         #ffffff;   // white

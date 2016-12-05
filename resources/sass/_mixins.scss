@@ -1,0 +1,89 @@
+// All mixins in this file, again, no css output
+
+@function strict-map-get($map, $key) {
+    @if map-has-key($map, $key) {
+        @return map-get($map, $key)
+    } @else {
+        @error "Map `#{$map}` has no key `#{$key}`";
+        @return null; 
+    }
+}
+
+// Breakpoints-Map responsive design
+$breakpoints-map: (
+    tablet: 768px
+) !default;
+
+@mixin respond-to($breakpoint) {
+    @media screen and (min-width: #{strict-map-get($breakpoints-map, $breakpoint)}) {
+        @content;
+    }
+}
+
+
+// Icon sizes
+@mixin icon_size($ratio, $height) {
+    $width: $ratio * $height;
+    background-size: $width $height;
+    width: $width;
+    height: $height;
+}
+
+@mixin font_icon_size($ratio) {
+    @include icon_size($ratio, 1em);
+}
+
+// FONTS
+
+// Responsive font sizes
+$font-size-map: (
+    small: (
+        mobile: 1.2rem,
+        tablet: 1.4rem
+    )
+) !default;
+
+@mixin dynamic-font-size($size) {
+    $smap: strict-map-get($font-size-map, $size);
+
+    @if map-has-key($smap, mobile) {
+        font-size: #{map-get($smap, mobile)};  // CSS output for mobile first
+    }
+
+    @each $key in (tablet, desktop, fourK) {
+        @if map-has-key($smap, $key) {
+            @include respond-to($key) {
+                font-size: #{map-get($smap, $key)};  // CSS output for responsive
+            }
+        }
+    }
+}
+
+// Setting the font-family
+$font-map: (
+    base: (
+        font-family: Sans  // And any other font-properties you always wanna set along with font
+    )
+) !default;
+
+@mixin set-font($name) {
+    $smap: strict-map-get($font-map, $name);
+
+    @each $key, $value in $smap {
+        #{$key}: $value;
+    }
+}
+
+
+
+// Misc
+
+@mixin page-margin($width) {
+    margin-left: $width;
+    margin-right: $width;
+}
+
+@mixin flush_top($line-height) {
+    line-height: $line-height;
+    margin-top: #{-($line-height) / 4}em;
+}

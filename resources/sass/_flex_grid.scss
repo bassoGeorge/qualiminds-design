@@ -1,0 +1,22 @@
+@import "_config.scss";
+@import "_mixins.scss";
+
+.flex-grid {
+    display: flex;
+    flex-wrap: wrap;
+
+    [grid-item], .grid-item {
+        width: 100%;
+    }
+}
+
+@each $breakpoint in (tablet, desktop) {
+    @include respond-to($breakpoint) {
+        @for $num from 2 through 5 {
+            .flex-grid.#{$breakpoint}-#{$num} [grid-item],
+            .flex-grid.#{$breakpoint}-#{$num} .grid-item, {
+                width: 100% / $num;
+            }
+        }
+    }
+}
