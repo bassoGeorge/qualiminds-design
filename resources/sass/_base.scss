@@ -13,7 +13,7 @@ body {
     padding: 0;
     margin: 0;
 
-    @include dynamic-font-size(small);
+    @include dynamic-font-size(body-small);
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -21,25 +21,14 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 h1 {
-    @include dynamic-font-size(large);
+    /* @include dynamic-font-size(large); */
+    @include set-font(heavy-header);
 }
 
 h2 {
-    @include dynamic-font-size(medium);
+    /* @include dynamic-font-size(medium); */
 }
 
 h3 {
-    @include dynamic-font-size(small);
+    /* @include dynamic-font-size(small); */
 }
-
-/*
-.page-content {
-    @include page-margin(map-get($page-margin-map, mobile));
-    @include respond-to(tablet) {
-        @include page-margin(map-get($page-margin-map, tablet));
-    }
-
-    @include respond-to(desktop) {
-        @include page-margin(map-get($page-margin-map, desktop));
-    }
-} */

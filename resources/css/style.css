@@ -40,61 +40,39 @@ body {
   color: #636465;
   padding: 0;
   margin: 0;
-  font-size: 1.2rem;
-}
-
-@media screen and (min-width: 48em) {
-  body {
-    font-size: 1.4rem;
-  }
+  font-size: 1.4rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: Raleway;
+  font-weight: 700;
 }
 
 h1 {
-  font-size: 2.1rem;
-}
-
-@media screen and (min-width: 48em) {
-  h1 {
-    font-size: 2.2rem;
-  }
+  /* @include dynamic-font-size(large); */
+  font-family: Raleway;
+  font-weight: 800;
 }
 
 h2 {
-  font-size: 1.6rem;
-}
-
-@media screen and (min-width: 48em) {
-  h2 {
-    font-size: 1.8rem;
-  }
+  /* @include dynamic-font-size(medium); */
 }
 
 h3 {
-  font-size: 1.2rem;
+  /* @include dynamic-font-size(small); */
 }
 
-@media screen and (min-width: 48em) {
-  h3 {
-    font-size: 1.4rem;
-  }
+a {
+  color: #f61d22;
 }
 
-/*
-.page-content {
-    @include page-margin(map-get($page-margin-map, mobile));
-    @include respond-to(tablet) {
-        @include page-margin(map-get($page-margin-map, tablet));
-    }
+a.nav-link {
+  /* color: $color-primary; */
+  font-family: Arimo;
+  font-weight: 700;
+  /* @include dynamic-font-size(nav-link); */
+}
 
-    @include respond-to(desktop) {
-        @include page-margin(map-get($page-margin-map, desktop));
-    }
-} */
-/* @import "_links.scss"; */
 .flex-grid {
   display: flex;
   flex-wrap: wrap;

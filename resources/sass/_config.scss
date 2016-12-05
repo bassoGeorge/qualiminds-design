@@ -15,47 +15,37 @@ $breakpoints-map: (
 $font-map: (
     header: (
         font-family: Raleway,
-        /* letter-spacing: 0.08em, */
-        /* text-transform: uppercase */
+        font-weight: 700
+    ),
+    heavy-header: (
+        font-family: Raleway,
+        font-weight: 800
     ),
     body: (
         font-family: Arimo
+    ),
+    link: (
+        font-family: Arimo,
+        font-weight: 700
     )
 );
 
 $font-size-map: (
-    small: (
-        mobile: 1.2rem,
-        tablet: 1.4rem
+    body-tiny: (
+        mobile: 1.2rem
     ),
-    medium: (
-        mobile: 1.6rem,
-        tablet: 1.8rem
+    body-small: (
+        mobile: 1.4rem
     ),
-    large: (
-        mobile: 2.1rem,
-        tablet: 2.2rem
+    body-medium: (
+        mobile: 1.6rem
     ),
-    social-icon: (
-        mobile: 2.5rem,
-        tablet: 2.5rem,
-        desktop: 4rem
+    body-large: (
+        mobile: 1.7rem
     ),
-    lead-para: (
-        mobile: 1.2rem,
-        tablet: 1.6rem,
-        desktop: 1.8rem
-    ),
-
-    nav-link: (
-        mobile: 1.4rem,
-        tablet: 1.8rem
-    ),
-    quote: (
-        mobile: 2.1rem,
-        tablet: 4rem,
-        desktop: 5rem
-    ),
+    body-huge: (
+        mobile: 1.8rem
+    )
 );
 
 $page-margin-map: (
