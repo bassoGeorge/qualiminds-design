@@ -8,38 +8,72 @@ html {
 body {
     @include set-font(body);
 
-    line-height: $lh-medium;
     color: $color-main-text;
     padding: 0;
     margin: 0;
 
-    @include dynamic-font-size(small);
+    @include dynamic-font-size(body-small);
 }
 
-h1,h2,h3,h4,h5,h6 {
-    @include set-font(header);
+.inverse {
+    color: $color-inverse-text;
+}
+
+.inverse-background {
+    background-color: $color-primary;
 }
 
 h1 {
-    @include dynamic-font-size(large);
+    @include set-font(heavy-header);
+    @include dynamic-font-size(header-huge);
 }
 
 h2 {
-    @include dynamic-font-size(medium);
+    @include set-font(light-header);
+    @include dynamic-font-size(header-large);
 }
 
 h3 {
-    @include dynamic-font-size(small);
+    @include set-font(light-header);
+    @include dynamic-font-size(header-medium);
 }
 
-/*
-.page-content {
-    @include page-margin(map-get($page-margin-map, mobile));
-    @include respond-to(tablet) {
-        @include page-margin(map-get($page-margin-map, tablet));
-    }
+h4 {
+    @include set-font(header);
+    @include dynamic-font-size(header-medium);
+}
 
-    @include respond-to(desktop) {
-        @include page-margin(map-get($page-margin-map, desktop));
-    }
-} */
+h5 {
+    @include set-font(light-header);
+    @include dynamic-font-size(header-small);
+}
+
+quote.large {
+    @include set-font(light-header);
+    @include dynamic-font-size(quote-large);
+    line-height: 1.61;
+    letter-spacing: 0.7px;
+}
+
+quote {
+    @include set-font(heavy-header);
+    @include dynamic-font-size(quote-medium);
+    line-height: 1.48;
+    letter-spacing: 0.5px;
+}
+
+.txt-huge {
+    @include dynamic-font-size(body-huge);
+    line-height: 2.28;
+}
+.txt-large {
+    @include dynamic-font-size(body-large);
+    line-height: 2.41;
+}
+.txt-small-extra-height {
+    line-height: 2.29;
+}
+.txt-tiny {
+    @include dynamic-font-size(body-tiny);
+    line-height: 2.83;
+}
