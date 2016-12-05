@@ -1,0 +1,21 @@
+/*
+Css related to the header
+*/
+
+/* TODO: Vertically align the banner and make the header have a fixed height?? */
+header {
+    .banner {
+        width: auto;
+    }
+    nav {
+        padding-top: 2.2em;
+        padding-bottom: 2.2em;
+        float: right;
+
+        ul li {
+            display: inline-block;
+            padding-left: 1em;
+            padding-right: 1em;
+        }
+    }
+}
