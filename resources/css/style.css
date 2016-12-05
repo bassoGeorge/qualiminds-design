@@ -36,41 +36,105 @@ html {
 
 body {
   font-family: Arimo;
-  line-height: 1.6;
+  font-weight: 400;
+  letter-spacing: 0.2px;
   color: #636465;
   padding: 0;
   margin: 0;
   font-size: 1.4rem;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: Raleway;
-  font-weight: 700;
+.inverse {
+  color: #ffffff;
+}
+
+.inverse-background {
+  background-color: #f61d22;
 }
 
 h1 {
-  /* @include dynamic-font-size(large); */
   font-family: Raleway;
   font-weight: 800;
+  letter-spacing: 0.6px;
+  font-size: 4.8rem;
 }
 
 h2 {
-  /* @include dynamic-font-size(medium); */
+  font-family: Raleway;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+  font-size: 3.6rem;
 }
 
 h3 {
-  /* @include dynamic-font-size(small); */
+  font-family: Raleway;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+  font-size: 2.4rem;
+}
+
+h4 {
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 2.4rem;
+}
+
+h5 {
+  font-family: Raleway;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+  font-size: 1.8rem;
+}
+
+quote.large {
+  font-family: Raleway;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+  font-size: 5.4rem;
+  line-height: 1.61;
+  letter-spacing: 0.7px;
+}
+
+quote {
+  font-family: Raleway;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  font-size: 4rem;
+  line-height: 1.48;
+  letter-spacing: 0.5px;
+}
+
+.txt-huge {
+  font-size: 1.8rem;
+  line-height: 2.28;
+}
+
+.txt-large {
+  font-size: 1.7rem;
+  line-height: 2.41;
+}
+
+.txt-small-extra-height {
+  line-height: 2.29;
+}
+
+.txt-tiny {
+  font-size: 1.2rem;
+  line-height: 2.83;
 }
 
 a {
   color: #f61d22;
 }
 
+a.header-link {
+  color: #636465;
+}
+
 a.nav-link {
-  /* color: $color-primary; */
   font-family: Arimo;
   font-weight: 700;
-  /* @include dynamic-font-size(nav-link); */
+  letter-spacing: 0.2px;
 }
 
 .flex-grid {
