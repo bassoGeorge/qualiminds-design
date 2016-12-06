@@ -6,17 +6,35 @@
     flex-wrap: wrap;
 
     [grid-item], .grid-item {
-        width: 100%;
+        flex-grow: 1;
     }
 }
 
+.centered {
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.guttered {
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+
+    [grid-item], .grid-item {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+}
+
+// TODO, need to rework this if there is a default case for mobile other than a single stack
 @each $breakpoint in (tablet, desktop) {
-    @include respond-to($breakpoint) {
-        @for $num from 2 through 5 {
-            .flex-grid.#{$breakpoint}-#{$num} [grid-item],
-            .flex-grid.#{$breakpoint}-#{$num} .grid-item, {
+    @for $num from 2 through 5 {
+        .flex-grid.#{$breakpoint}-#{$num} [grid-item],
+        .flex-grid.#{$breakpoint}-#{$num} .grid-item, {
+
+            @include respond-to($breakpoint) {
                 width: 100% / $num;
             }
+            width: 100%;
         }
     }
 }
