@@ -1,18 +1,22 @@
+@import "_config.scss";
+
 .about-us-banner {
     background-image: url("/resources/dummy_images/landing_banner_1279x549.png");
     width: 100%;
     height: 549px;
 
 }
-.about-list {
-    list-style-type: circle;
-    list-style-position: inside;
-    line-height: 2.5;
-    margin-top: 1em;
-}
 
 // TODO: connect up to page margin
 .about-us-grid-text {
     padding-left: 5rem;
     padding-right: 5rem;
+}
+
+i.icon.test {
+    display: block;
+    height: 67px;
+    width: 67px;
+    background-color: $color-primary;
+    margin: 4.5rem auto;
 }
