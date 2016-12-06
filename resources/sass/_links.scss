@@ -1,7 +1,7 @@
 @import "_config.scss";
 @import "_mixins.scss";
 
-a {
+a.link {
     color: $color-primary;
     text-transform: uppercase;
 }
@@ -11,5 +11,6 @@ a.header-link {
 }
 
 a.nav-link {
+    color: $color-primary;
     @include set-font(heavy-body);
 }

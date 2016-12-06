@@ -1,6 +1,7 @@
 /*
 Just the landing page
 */
+@import "_config.scss";
 
 /* TODO: use better way to center the quote */
 .main-banner {
@@ -21,6 +22,36 @@ Just the landing page
             span:first-child {
                 padding-right: 3em;
             }
+        }
+    }
+}
+
+.service-link {
+    position: relative;
+    line-height: 0;
+    &>a {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+    }
+    .overlay {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba($color-primary, 0.5);
+        display: flex;
+        align-items: center;
+
+        h3 {
+            padding-left: 0.5em;
+            padding-right: 0.5em;
+            text-align: center;
+            display: block;
+            margin: 0 auto;
+            line-height: 1.6;
         }
     }
 }
