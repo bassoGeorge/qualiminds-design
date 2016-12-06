@@ -27,6 +27,7 @@ body {
 h1 {
     @include set-font(heavy-header);
     @include dynamic-font-size(header-huge);
+    margin-bottom: 0.6em;
 }
 
 h2 {
@@ -42,6 +43,8 @@ h3 {
 h4 {
     @include set-font(header);
     @include dynamic-font-size(header-medium);
+    line-height: 1.4;
+    margin-bottom: 0.5em;
 }
 
 h5 {

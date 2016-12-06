@@ -6,11 +6,17 @@ a.link {
     text-transform: uppercase;
 }
 
-a.header-link {
+a.header.link {
     color: $color-main-text;
 }
 
-a.nav-link {
-    color: $color-primary;
+a.nav.link {
+
+    @include set-font(heavy-body);
+
+    @include dynamic-font-size(body-medium);
+}
+
+a.post.link {
     @include set-font(heavy-body);
 }
