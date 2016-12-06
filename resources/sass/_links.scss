@@ -1,15 +1,22 @@
 @import "_config.scss";
 @import "_mixins.scss";
 
-a {
+a.link {
     color: $color-primary;
     text-transform: uppercase;
 }
 
-a.header-link {
+a.header.link {
     color: $color-main-text;
 }
 
-a.nav-link {
+a.nav.link {
+
+    @include set-font(heavy-body);
+
+    @include dynamic-font-size(body-medium);
+}
+
+a.post.link {
     @include set-font(heavy-body);
 }
