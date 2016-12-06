@@ -109,7 +109,11 @@ quote {
 
 .bullet-list {
     list-style-type: disc;
-    list-style-position: inside;
+    list-style-position: outside;
     line-height: 2.5;
     margin-top: 1em;
+    padding-left: 2.5rem;
+    li {
+        padding-left: 2.5rem;
+    }
 }
