@@ -1,0 +1,8 @@
+footer {
+    &>div:first-child {
+        float: left;
+    }
+    &>div:last-child {
+        float: right;
+    }
+}
