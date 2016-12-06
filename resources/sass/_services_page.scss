@@ -1,0 +1,27 @@
+@inlude "_mixins.scss";
+
+.service-row {
+    h2 {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+    }
+    border-bottom: 1px solid #d3d3d3;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.service-row:last-child {
+    border: none;
+}
+
+@include respond-to(tablet) {
+    .service-row:nth-child(odd) {
+        .grid-item:first-child {
+            order: 2;
+        }
+        .grid-item:last-child {
+            order: 1
+        }
+    }
+}
