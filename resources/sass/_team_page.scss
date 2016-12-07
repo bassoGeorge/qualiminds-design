@@ -1,0 +1,14 @@
+/* The team page */
+.flex-grid.team-grid {
+    .grid-item:first-child {
+        padding-right: 5rem;
+        width: 35%;
+    }
+    margin-bottom: 6rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid #d3d3d3;
+    &:last-child {
+        border: 0;
+        padding-bottom: 0;
+    }
+}

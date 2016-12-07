@@ -50,6 +50,7 @@ h4 {
 h5 {
     @include set-font(light-header);
     @include dynamic-font-size(header-small);
+    margin-bottom: 1em;
 }
 
 quote.large {
