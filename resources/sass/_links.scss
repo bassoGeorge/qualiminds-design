@@ -10,6 +10,11 @@ a.header.link {
     color: $color-main-text;
 }
 
+.header-menu a {
+    text-transform: uppercase;
+    color: $color-main-text;
+}
+
 a.nav.link {
 
     @include set-font(heavy-body);

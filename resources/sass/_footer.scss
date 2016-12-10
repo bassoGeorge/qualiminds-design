@@ -9,4 +9,25 @@ footer {
         display: flex;
         justify-content: space-between;   // This is just fantastic
     }
+    .right-section {
+        text-align: right;
+        p {
+            margin-bottom: 2rem;
+        }
+        .icon {
+            font-size: 1.9rem; // TODO: we may want to use a dynamic size
+            margin-left: 2rem;
+        }
+    }
+    .left-section {
+        position: relative;
+        .icon {
+            position: absolute;
+            font-size: 2rem;
+            top: 0.5rem;
+        }
+        p {
+            margin-left: 3rem;
+        }
+    }
 }
