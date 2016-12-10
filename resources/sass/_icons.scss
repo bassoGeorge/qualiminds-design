@@ -66,3 +66,19 @@ $contact-icon-map: (
     display: block;
     margin: 0 auto;
 }
+
+/* ---- Support for image icons ------ */
+
+.icon.choose {
+    width:100%;
+    height: 15rem;
+    background-position: center;
+    background-size: auto 10rem;
+    background-repeat: no-repeat;
+}
+
+@for $num from 1 through 3 {
+    #choose-#{$num} {
+    @include high-res-image("../icons/choose#{$num}", "png");
+    }
+}

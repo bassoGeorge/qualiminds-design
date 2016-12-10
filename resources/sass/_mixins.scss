@@ -20,6 +20,27 @@ $breakpoints-map: (
     }
 }
 
+@mixin high-res-image($image, $format) {
+
+   background-image: url("#{$image}.#{$format}");
+
+   @media screen and (-o-min-device-pixel-ratio: 5/4),
+       screen and (-webkit-min-device-pixel-ratio: 1.25),
+       screen and (min--moz-device-pixel-ratio: 1.25),
+       screen and (min-device-pixel-ratio: 1.25),
+       screen and (min-resolution: 1.25dppx) {
+           background-image: url("#{$image}@2x.#{$format}");
+    }
+
+   @media screen and (-o-min-device-pixel-ratio: 9/4),
+       screen and (-webkit-min-device-pixel-ratio: 2.25),
+       screen and (min--moz-device-pixel-ratio: 2.25),
+       screen and (min-device-pixel-ratio: 2.25),
+       screen and (min-resolution: 2.25dppx) {
+           background-image: url("#{$image}@3x.#{$format}");
+    }
+}
+
 
 // Icon sizes
 @mixin icon_size($ratio, $height) {
