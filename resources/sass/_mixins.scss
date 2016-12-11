@@ -108,3 +108,7 @@ $font-map: (
     line-height: $line-height;
     margin-top: #{-($line-height) / 4}em;
 }
+
+@function standard-border() {
+    @return 1px solid #d3d3d3;
+}

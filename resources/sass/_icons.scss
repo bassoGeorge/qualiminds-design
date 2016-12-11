@@ -107,3 +107,17 @@ $contact-icon-map: (
     background-repeat: no-repeat;
     @include high-res-image("../icons/logo", "png");
 }
+
+/* ---- And menu button --------------- */
+.icon.menu {
+    width: 1.8rem;
+    height: 1.2rem;
+    background-position: center;
+    background-size: auto 1.2rem;
+    background-repeat: no-repeat;
+    background-image: url("../icons/menu.png");
+}
+
+.icon.menu.close {
+    background-image: url("../icons/menu_close.png")
+}
