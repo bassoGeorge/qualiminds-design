@@ -10,6 +10,12 @@
     }
 }
 
+.flex-grid.fixed {
+    [grid-item], .grid-item {
+        flex-grow: 0;
+    }
+}
+
 .centered {
     /* justify-content: center; */
     align-items: center;

@@ -1,0 +1,41 @@
+.article-link {
+    margin-bottom: 2rem;
+    img {
+        margin: auto;
+        height: auto;
+    }
+    figcaption {
+        padding-top: 1em;
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+}
+
+.article-post {
+    article {
+        box-sizing: border-box;
+        padding-right: 2rem;
+        width: 70%;
+        img {
+            width: auto;
+            height: auto;
+            margin: 1rem auto;
+            display: block;
+        }
+        h1 {
+            margin-bottom: 0;
+        }
+    }
+    aside {
+        padding-top: 3rem;
+        width: 30%;
+        box-sizing: border-box;
+        padding-left: 2rem;
+        .article-link {
+            border-bottom: 1px solid #d3d3d3;
+            padding-bottom: 2.6rem;
+            margin-bottom: 3.2rem;
+        }
+
+    }
+}
