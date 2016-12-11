@@ -73,12 +73,37 @@ $contact-icon-map: (
     width:100%;
     height: 15rem;
     background-position: center;
-    background-size: auto 10rem;
+    background-size: auto 8rem;
     background-repeat: no-repeat;
 }
 
 @for $num from 1 through 3 {
     #choose-#{$num} {
-    @include high-res-image("../icons/choose#{$num}", "png");
+    @include high-res-image("../icons/choose-#{$num}", "png");
     }
+}
+
+.icon.service {
+    width: 100%;
+    height: 11rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    // Background-size is pretty much good from the png
+}
+
+@for $num from 1 through 4 {
+    #service-#{$num} .icon {
+        background-image: url("../icons/service-#{$num}.png");
+    }
+
+}
+
+/* ---- And the logo ofcourse --------- */
+.icon.logo {
+    height: 8rem;
+    width: 20rem;
+    background-position: center;
+    background-size: auto 4.6rem;
+    background-repeat: no-repeat;
+    @include high-res-image("../icons/logo", "png");
 }

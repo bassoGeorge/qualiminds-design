@@ -12,7 +12,12 @@ a.header.link {
 
 .header-menu a {
     text-transform: uppercase;
-    color: $color-main-text;
+    color: $color-secondary-text;
+
+    &:hover,
+    &:active {
+        color: $color-main-text;
+    }
 }
 
 a.nav.link {
