@@ -27,7 +27,9 @@ body {
 h1 {
     @include set-font(heavy-header);
     @include dynamic-font-size(header-huge);
-    margin-bottom: 0.6em;
+    @include respond-to(tablet){
+        margin-bottom: 0.6em;
+    }
 }
 
 h2 {
