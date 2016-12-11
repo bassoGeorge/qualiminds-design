@@ -15,7 +15,6 @@ header {
     }
     nav {
         flex-grow: 1;
-        order: 3;
         width: 100%;
         /* float: right; */
         display: none;
@@ -26,21 +25,15 @@ header {
             border-bottom: standard-border();
         }
     }
-    /* nav.open { */
-    /*     display: block; */
-    /* } */
 
     button {
         margin-right: 1rem;
-        order: 2;
         flex-grow: 1;
         text-align: right;
     }
 
     @include respond-to(tablet) {
         flex-wrap: nowrap;
-        .banner {
-        }
         nav {
             text-align: right;
             padding-top: 2.2em;

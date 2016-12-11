@@ -112,3 +112,11 @@ $font-map: (
 @function standard-border() {
     @return 1px solid #d3d3d3;
 }
+
+@mixin flex-gutter($width) {
+    margin: -$width;
+
+    [grid-item], .grid-item {
+        padding: $width;
+    }
+}

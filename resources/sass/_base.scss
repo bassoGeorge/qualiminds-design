@@ -94,14 +94,11 @@ quote {
     clear: both;
 }
 
-// TODO: use page margin map or something
 .page-section {
-    /* margin-top: 2rem; */
-    /* margin-bottom: 7rem; */
-    padding-left: 5rem;
-    padding-right: 5rem;
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+    padding: 2.3rem;
+    @include respond-to(tablet) {
+        padding: 4rem 5rem;
+    }
 }
 
 .no-text {
