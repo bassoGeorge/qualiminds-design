@@ -74,5 +74,9 @@ Just the landing page
             margin: 0 auto;
             line-height: 1.6;
         }
+        &:hover,
+        &:active {
+            background-color: rgba(lighten($color-primary, 10%), 0.5);
+        }
     }
 }

@@ -104,7 +104,7 @@ $contact-icons: location_pin email call;
 .icon.logo {
     height: 8rem;
     width: 20rem;
-    background-position: center;
+    background-position: center 63%; // Extreme eyeballing
     background-size: auto 4.6rem;
     background-repeat: no-repeat;
     @include high-res-image("../icons/logo", "png");

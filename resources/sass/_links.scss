@@ -4,6 +4,10 @@
 a.link {
     color: $color-primary;
     text-transform: uppercase;
+    &:hover,
+    &:active {
+        color: lighten($color-primary, 20%);
+    }
 }
 
 a.header.link {
