@@ -8,7 +8,7 @@ html {
 body {
     @include set-font(body);
 
-    color: $color-main-text;
+    color: $color-secondary-text;
     padding: 0;
     margin: 0;
 
@@ -24,10 +24,17 @@ body {
     background-color: $color-primary;
 }
 
+h1, h2, h3, h4, h5, quote {
+    color: $color-main-text;
+}
+
 h1 {
     @include set-font(heavy-header);
     @include dynamic-font-size(header-huge);
-    margin-bottom: 0.6em;
+
+    @include respond-to(tablet){
+        margin-bottom: 0.6em;
+    }
 }
 
 h2 {
@@ -42,14 +49,14 @@ h3 {
 
 h4 {
     @include set-font(header);
-    @include dynamic-font-size(header-medium);
+    @include dynamic-font-size(header-small);
     line-height: 1.4;
     margin-bottom: 0.5em;
 }
 
 h5 {
     @include set-font(light-header);
-    @include dynamic-font-size(header-small);
+    @include dynamic-font-size(header-tiny);
     margin-bottom: 1em;
 }
 
@@ -75,6 +82,12 @@ quote {
     @include dynamic-font-size(body-large);
     line-height: 2.41;
 }
+
+.txt-medium {
+    @include dynamic-font-size(body-medium);
+    line-height: 2.2;
+}
+
 .txt-small-extra-height {
     line-height: 2.29;
 }
@@ -94,14 +107,11 @@ quote {
     clear: both;
 }
 
-// TODO: use page margin map or something
 .page-section {
-    /* margin-top: 2rem; */
-    /* margin-bottom: 7rem; */
-    padding-left: 5rem;
-    padding-right: 5rem;
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+    padding: 2.3rem;
+    @include respond-to(tablet) {
+        padding: 4rem 5rem;
+    }
 }
 
 .no-text {

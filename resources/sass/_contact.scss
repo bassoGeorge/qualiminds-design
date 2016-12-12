@@ -1,0 +1,46 @@
+@import "_config.scss";
+@import "_mixins.scss";
+
+
+#location-container {
+    width: 100%;
+    @include respond-to(tablet) {
+        width: 60%;
+    }
+}
+
+#contact-container {
+    width: 100%;
+    @include respond-to(tablet) {
+        width: 40%;
+    }
+
+    .address {
+        margin-bottom: 4rem;
+    }
+}
+
+#location-map {
+    background-image: url("../dummy_images/about_646x474.jpg");
+    background-position: center 10%;
+    background-size: cover;
+    min-height: 300px;
+}
+
+ul.contact-info {
+    a {
+        color: $color-secondary-text;
+    }
+    li {
+        position: relative;
+        margin-bottom: 1rem;
+        p {
+            padding-left: 4rem;
+        }
+        .icon {
+            position: absolute;
+            top: 0.5em;
+            left: 0.1em;
+        }
+    }
+}

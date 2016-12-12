@@ -1,12 +1,25 @@
+@import "_mixins.scss";
+
 /* The team page */
 .flex-grid.team-grid {
-    .grid-item:first-child {
-        padding-right: 5rem;
-        width: 35%;
-    }
+
     margin-bottom: 6rem;
     padding-bottom: 3rem;
     border-bottom: 1px solid #d3d3d3;
+
+    .grid-item:first-child {
+        width: 35%;
+        @include respond-to(tablet) {
+            padding-right: 5rem;
+        }
+    }
+
+    h2,h5 {
+        text-align: center;
+        @include respond-to(tablet) {
+            text-align: left;
+        }
+    }
     &:last-child {
         border: 0;
         padding-bottom: 0;

@@ -51,14 +51,16 @@ $social-icon-map: (
     }
 }
 
-$contact-icon-map: (
-    location_pin: 20.92 / 30
-);
 
-@each $icon, $ratio in $contact-icon-map {
+$contact-icons: location_pin email call;
+
+@each $icon in $contact-icons {
     .icon.#{$icon} {
-        @include font_icon_size($ratio);
-        background: icon_path($icon)
+        background-image: url("../icons/#{$icon}.png");
+        width: 16px;
+        height: 20px;
+        background-position: center;
+        background-repeat: no-repeat;
     }
 }
 

@@ -2,28 +2,48 @@
 Just the landing page
 */
 @import "_config.scss";
+@import "_mixins.scss";
 
 /* TODO: use better way to center the quote */
 .main-banner {
     background-image: url("../dummy_images/landing_banner_1279x549.jpg");
     width: 100%;
-    height: 549px;
-    padding: 1rem;
+    height: 549px;   // TODO
+    padding: 2.5rem;
 
-    // TODO: This sucks in responsive... get it fixed
+    display: flex;
+    justify-content: center;
+
     .quote-box {
-        margin: 12rem 9rem auto 60rem;
+        /* margin: 12rem 9rem auto 60rem; */
+        text-align: center;
+        flex-grow: 0;
+        align-self: center;
         quote {
             display: block;
         }
         .nav.link {
             background: white;
-            padding: 1.3em 1em;
+            padding: 1em 0.6em;
             display: inline-block;
-            margin-top: 1em;
+            margin-top: 2.5rem;
             span:first-child {
-                padding-right: 3em;
+                padding-right: 1em;
             }
+            @media screen and (min-width: 375px) {
+                padding: 1.2em 1em;
+                span:first-child {
+                    padding-right: 2em;
+                }
+            }
+        }
+    }
+
+    @include respond-to(tablet) {
+        justify-content: flex-end;
+        .quote-box {
+            text-align: left;
+            max-width: 60%;
         }
     }
 }

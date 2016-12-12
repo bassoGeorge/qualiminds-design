@@ -17,22 +17,14 @@
 }
 
 .centered {
-    /* justify-content: center; */
     align-items: center;
 }
 
 .guttered {
-    margin: -0.5rem;
-
-    [grid-item], .grid-item {
-        padding: 0.5rem;
-    }
+    @include flex-gutter(0.5rem);
 }
 .guttered-large {
-    margin: -1rem;
-    [grid-item], .grid-item {
-        padding: 1rem;
-    }
+    @include flex-gutter(1rem);
 }
 
 // TODO, need to rework this if there is a default case for mobile other than a single stack
@@ -45,6 +37,14 @@
                 width: 100% / $num;
             }
             width: 100%;
+        }
+    }
+
+    @for $num from 2 through 4 {
+        .grid-item.#{$breakpoint}-order-#{$num} {
+            @include respond-to($breakpoint) {
+                order: $num;
+            }
         }
     }
 }

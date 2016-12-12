@@ -2,6 +2,7 @@
 Css related to the header
 */
 @import "_mixins.scss";
+@import "_config.scss";
 
 /* TODO: Vertically align the banner and make the header have a fixed height?? */
 header {
@@ -15,7 +16,6 @@ header {
     }
     nav {
         flex-grow: 1;
-        order: 3;
         width: 100%;
         /* float: right; */
         display: none;
@@ -23,24 +23,18 @@ header {
         ul li {
             display: block;
             padding: 0.8em 1em 0.8em 1.5em;
-            border-bottom: standard-border();
+            border-bottom: $separator;
         }
     }
-    /* nav.open { */
-    /*     display: block; */
-    /* } */
 
     button {
         margin-right: 1rem;
-        order: 2;
         flex-grow: 1;
         text-align: right;
     }
 
     @include respond-to(tablet) {
         flex-wrap: nowrap;
-        .banner {
-        }
         nav {
             text-align: right;
             padding-top: 2.2em;
