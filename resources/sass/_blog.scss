@@ -1,3 +1,6 @@
+@import "_mixins.scss";
+@import "_config.scss";
+
 .article-link {
     margin-bottom: 2rem;
     img {
@@ -12,12 +15,14 @@
 }
 
 .article-post {
+    flex-wrap: wrap;
+
     article {
         box-sizing: border-box;
-        padding-right: 2rem;
-        width: 70%;
+        width: 100%;
         img {
             width: auto;
+            max-width: 100%;
             height: auto;
             margin: 1rem auto;
             display: block;
@@ -25,16 +30,29 @@
         h1 {
             margin-bottom: 0;
         }
+        border-bottom: $separator;
+        padding-bottom: 3rem;
+
+        @include respond-to(tablet) {
+            padding-right: 2rem;
+            width: 70%;
+            border-bottom: 0;
+            padding-bottom: 0;
+        }
     }
     aside {
         padding-top: 3rem;
-        width: 30%;
         box-sizing: border-box;
-        padding-left: 2rem;
+        width: 100%;
         .article-link {
             border-bottom: 1px solid #d3d3d3;
             padding-bottom: 2.6rem;
             margin-bottom: 3.2rem;
+        }
+
+        @include respond-to(tablet) {
+            width: 30%;
+            padding-left: 2rem;
         }
 
     }

@@ -109,10 +109,6 @@ $font-map: (
     margin-top: #{-($line-height) / 4}em;
 }
 
-@function standard-border() {
-    @return 1px solid #d3d3d3;
-}
-
 @mixin flex-gutter($width) {
     margin: -$width;
 
