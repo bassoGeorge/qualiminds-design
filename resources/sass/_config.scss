@@ -56,19 +56,27 @@ $font-size-map: (
         mobile: 1.8rem
     ),
 
-    header-small: (
+    header-tiny: (       // h5
         mobile: 1.6rem,
         tablet: 1.8rem
     ),
-    header-medium: (
+
+    header-small: (      // h4
         mobile: 1.8rem,
         tablet: 2.4rem
     ),
-    header-large: (
+
+    header-medium: (
+        mobile: 2.4rem,   // h3
+        tablet: 3.8em
+    ),
+
+    header-large: (       // h2
         mobile: 3rem,
         tablet: 3.6rem
     ),
-    header-huge: (
+
+    header-huge: (        // h1
         mobile: 3.6rem,
         tablet: 4.8rem
     ),
