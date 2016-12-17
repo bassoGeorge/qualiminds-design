@@ -128,3 +128,14 @@ quote {
         padding-left: 2.5rem;
     }
 }
+
+.page-banner {
+    width: 100%;
+    height: $banner-height;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    // We shall get the background-image using style tag in html
+    // which will be populated by wordpress. neat.
+}
+

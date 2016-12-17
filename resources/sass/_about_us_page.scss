@@ -1,13 +1,6 @@
 @import "_config.scss";
 @import "_mixins.scss";
 
-.about-us-banner {
-    background-image: url("../dummy_images/landing_banner_1279x549.png");
-    width: 100%;
-    height: 549px;
-
-}
-
 // TODO: connect up to page margin
 .about-us-grid-text {
     padding-left: 2.3rem;
@@ -32,17 +25,14 @@ i.icon.test {
     margin: 4.5rem auto;
 }
 
-// And for a special appearance of mobile last media query
-@media screen and (max-width: strict-map-get($breakpoints-map, tablet) - 1) {
-    #expertise-offer .flex-grid {
-        .grid-item:first-child {
-            padding-bottom: 0;
-        }
-        .grid-item:last-child {
-            padding-top: 0;
-            .bullet-list {
-                margin-top: 0;
-            }
-        }
+#expertise-offer .flex-grid {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    .bullet-list {
+        margin-top: 0;
+    }
+    .grid-item {
+        padding-top: 0;
+        padding-bottom: 0;
     }
 }

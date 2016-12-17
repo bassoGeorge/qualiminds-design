@@ -67,8 +67,7 @@ $font-size-map: (
     ),
 
     header-medium: (
-        mobile: 2.4rem,   // h3
-        tablet: 3.8em
+        mobile: 2.4rem   // h3
     ),
 
     header-large: (       // h2
@@ -110,3 +109,4 @@ $color-inverse-text:         #ffffff;   // white
 
 // Misc
 $separator: 1px solid #d3d3d3;
+$banner-height: 550px;

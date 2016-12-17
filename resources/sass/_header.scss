@@ -31,6 +31,11 @@ header {
         margin-right: 1rem;
         flex-grow: 1;
         text-align: right;
+        border: 0;
+        background: none;
+    }
+    button:focus {
+        outline:none;
     }
 
     @include respond-to(tablet) {
